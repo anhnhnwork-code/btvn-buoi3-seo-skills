@@ -20,6 +20,13 @@ Gọi trực tiếp trong Claude Code:
 
 `seo-ai-review` cần biến môi trường `ANTHROPIC_API_KEY` đã được set sẵn trong shell.
 
+## Đã chạy thử (xem `outputs/`)
+- `2026-07-03-seo-audit-osakar-xe-may-dien.md` — chấm bài https://osakar.com.vn/tin-tuc/nen-mua-xe-may-dien-hang-nao/, đạt 82.5/100
+- `2026-07-04-seo-competitor-gap-osakar-vs-vinfast.md` — so gap bài Osakar với 1 bài so sánh xe máy điện VinFast
+- `seo-ai-review` chưa chạy thử — cần `ANTHROPIC_API_KEY` cá nhân, tự chạy khi cần (xem lưu ý bảo mật bên dưới)
+
+> **Lưu ý bảo mật:** Không paste API key thật vào cửa sổ chat Claude Code, vì nội dung chat sẽ bị xuất ra file `.txt` khi chạy `/export` và có thể lộ key nếu file đó được đẩy lên GitHub. Hãy set biến môi trường trong terminal của bạn trước khi gọi skill.
+
 ## Cấu trúc
 ```
 .claude/skills/
