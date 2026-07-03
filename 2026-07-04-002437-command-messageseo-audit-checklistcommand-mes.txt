@@ -1,0 +1,134 @@
+╭─── Claude Code v2.1.199 ─────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│               Welcome back Chúa SEO!               │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ What's new              │
+│                        ▘▘ ▝▝                       │ Changed `AskUserQuesti… │
+│  Sonnet 5 · Claude Pro · accyenthang2@gmail.com's  │ Changed the "default" … │
+│  Organization                                      │ Fixed a crash at start… │
+│               ~/btvn-buoi3-seo-skills              │ /release-notes for more │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+ ▎ Fable 5 is back.
+ ▎ Until July 7, you can use up to 50% of your plan's weekly usage limit on Fable 5. If you hit your limit, you can continue on Fable 5 with usage credits. Fable 5 draws down usage faster than Opus 4.8. Learn more
+   +1 more · /status
+
+❯ /seo-audit-checklist                                                          
+https://osakar.com.vn/tin-tuc/nen-mua-xe-may-dien-hang-nao/                     
+
+⏺ Trước tiên tôi sẽ lấy nội dung bài viết để nắm cấu trúc, sau đó xác nhận từ
+  khóa chính với bạn trước khi chấm điểm.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Đã crawl thành công (200, ~194KB). Giờ trích xuất phần nội dung chính.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Bài viết có Title/H1: "[Tổng hợp] Top 9+ hãng xe máy điện tốt nhất hiện nay"
+  và URL slug gợi ý "nên mua xe máy điện hãng nào". Trước khi chấm điểm, tôi cần
+  xác nhận từ khóa chính.
+
+⏺ User answered Claude's questions:
+  ⎿  · Từ khóa chính của bài viết này là gì? → nên mua xe máy điện hãng nào
+
+⏺ Từ khóa chính: "nên mua xe máy điện hãng nào". Giờ tôi đọc bảng tiêu chí và
+  trích xuất toàn bộ cấu trúc bài viết để chấm điểm.
+
+  Read 1 file, ran 4 shell commands (ctrl+o to expand)
+
+⏺ Tốt hơn nhiều. Giờ phân tích nội dung chính đã tách riêng.
+
+  Ran 3 shell commands (ctrl+o to expand)
+
+⏺ BeautifulSoup có sẵn, dùng để parse chính xác hơn.
+
+  Ran 9 shell commands (ctrl+o to expand)
+
+⏺ URL: https://osakar.com.vn/tin-tuc/nen-mua-xe-may-dien-hang-nao/
+  Từ khóa chính: "nên mua xe máy điện hãng nào"
+
+  Lưu ý: Trang không dùng thẻ <article> chuẩn nên tôi tách nội dung chính theo 
+  class post-main-content và loại bỏ carousel sản phẩm/sidebar/TOC — kết quả đếm
+  (số từ, số câu...) chính xác với phần thân bài nhưng có thể lệch nhỏ nếu 
+  theme thay đổi cấu trúc.
+
+  SEO Audit Score: 65/100
+
+  | # | Tiêu chí | Trạng thái | Ghi chú |
+  |---|----------|-----------|---------|
+  | 1 | H1 < 65 ký tự | pass | H1 dài 52 ký tự |
+  | 2 | H1 chứa từ khóa chính | fail | H1 = "[Tổng hợp] Top 9+ hãng xe máy điện
+  tốt nhất hiện nay" — không chứa "nên mua...hãng nào" dù có "hãng xe máy điện"
+  |
+  | 3 | Title tag < 65 ký tự | pass | Title trùng H1, 52 ký tự |
+  | 4 | Title có CTR signal | pass | Có số liệu "Top 9+" và "hiện nay" |
+  | 5 | Meta description 120–160 ký tự | pass | 131 ký tự |
+  | 6 | Meta chứa từ khóa | warn | Meta có "hãng nào tốt nhất" (biến thể) nhưng
+  thiếu "nên mua...hãng nào" đầy đủ |
+  | 7 | Từ khóa trong 150 ký tự đầu sapo | pass | Sapo mở đầu: "...việc nên mua
+  xe máy điện loại nào hay xe điện hãng nào tốt phụ thuộc..." — biến thể tự
+  nhiên của từ khóa |
+  | 8 | Bôi đậm từ khóa trong sapo | warn | Chỉ bôi đậm cụm "xe điện hãng nào
+  tốt", không bôi đậm đúng cụm từ khóa chính |
+  | 9 | Có bold/highlight trong bài | pass | 143 lượt bold — khá nhiều, nên cân
+  nhắc giảm để tránh loãng trọng tâm |
+  | 10 | Độ dài câu trung bình < 25 từ | fail | Trung bình 35.1 từ/câu (63 câu /
+  2213 từ) — câu quá dài |
+  | 11 | Độ dài đoạn trung bình < 4 câu | pass | Trung bình 1.83 câu/đoạn |
+  | 12 | Có UL/LI | pass | 22 danh sách bullet trong bài |
+  | 13 | Có ≥2 H2 | pass | 4 H2 |
+  | 14 | H3 dưới H2 dài khi cần | pass | 15 H3 phân bổ dưới 2 H2 dài (mục "9
+  hãng xe" và "FAQ") |
+  | 15 | Từ khóa trong heading | pass | H2 "3. Nên mua xe máy điện hãng nào tốt
+  nhất?" gần như khớp chính xác từ khóa |
+  | 16 | Keyword density 1–3% | fail | Cụm khóa chính xác chỉ xuất hiện 1 lần;
+  biến thể "hãng nào" 4 lần / 2213 từ ≈ 0.18% — quá thấp |
+  | 18 | Từ khóa trong ALT | fail | 0/11 ảnh trong bài có ALT chứa từ khóa hoặc
+  biến thể |
+  | 17 | ALT text mọi ảnh | warn | 11 ảnh trong nội dung, 1 ảnh thiếu ALT |
+  | 19 | Internal + external link uy tín | warn | 8 internal link (đạt); 3
+  external link nhưng chỉ trỏ về Facebook/YouTube/TikTok của chính OSAKAR —
+  không phải nguồn tham khảo uy tín độc lập |
+  | 20 | Từ khóa trong 150 ký tự cuối | fail | Đoạn kết: "...theo dõi
+  OSAKAR...tại các kênh sau!" — không chứa từ khóa hay biến thể rõ ràng |
+
+  Vấn đề ưu tiên cao (fail):
+  - H1 và title tag hoàn toàn không chứa từ khóa chính "nên mua xe máy điện hãng
+  nào" (chỉ có H2 mục 3 chứa).
+  - Câu văn quá dài, trung bình 35 từ/câu — nên tách câu để tăng khả năng
+  đọc/scan.
+  - Keyword density quá thấp (~0.18%), gần như không xuất hiện từ khóa chính
+  dạng chính xác trong toàn bài.
+  - ALT ảnh không có ảnh nào chứa từ khóa/biến thể.
+  - Đoạn kết bài không nhắc lại từ khóa, chỉ có CTA theo dõi kênh MXH.
+
+  Vấn đề cần cải thiện (warn):
+  - Meta description và câu sapo chỉ dùng biến thể "hãng nào" chứ chưa có cụm từ
+  khóa đầy đủ được bôi đậm/nhấn mạnh.
+  - 1/11 ảnh thiếu ALT.
+  - External link chỉ trỏ về kênh MXH riêng của brand, thiếu nguồn tham khảo uy
+  tín bên thứ ba (báo chí, số liệu ngành...).
+
+  Gợi ý chỉnh sửa nhanh:
+  - Sửa H1/Title thành dạng chứa nguyên cụm khóa, ví dụ: "Nên Mua Xe Máy Điện
+  Hãng Nào Tốt Nhất? Top 9+ Thương Hiệu 2026".
+  - Bôi đậm chính xác cụm "nên mua xe máy điện hãng nào" ngay trong câu đầu sapo
+  thay vì chỉ bôi đậm "xe điện hãng nào tốt".
+  - Chèn thêm 2–3 lần cụm từ khóa chính xác (không chỉ biến thể) rải đều trong
+  các đoạn mô tả từng hãng và trong đoạn kết.
+  - Bổ sung ALT cho ảnh liên hệ (đang thiếu) và đổi 2–3 ALT ảnh sang dạng chứa
+  từ khóa, ví dụ "nên mua xe máy điện hãng nào - VinFast Evo200 Lite".
+  - Tách bớt các câu dài (>25 từ) thành 2 câu ngắn hơn, đặc biệt ở phần mô tả 9
+  hãng xe.
+  - Thêm 1 external link tới nguồn uy tín độc lập (báo/số liệu ngành xe điện) để
+  tăng tín hiệu E-E-A-T thay vì chỉ link mạng xã hội riêng.
+  - Viết lại đoạn kết bài để nhắc lại cụm từ khóa chính, ví dụ: "Trên đây là gợi
+  ý giúp bạn trả lời câu hỏi nên mua xe máy điện hãng nào phù hợp nhất..."
+
+  Điểm 65/100 rơi vào mức "50–75: cần chỉnh sửa" — bài đã có cấu trúc
+  heading/list tốt nhưng yếu nhất ở việc gài từ khóa chính xác (H1, title, ALT,
+  mật độ, đoạn kết) và câu văn quá dài.
+
+✻ Brewed for 4m 0s
