@@ -1,6 +1,8 @@
-# BTVN Buổi 3 — SEO Skills Workspace
+# BTVN Buổi 3 & 4 — SEO Skills & Agents Workspace
 
 Bài tập về nhà Buổi 3 (khóa Claude Code, SEONGON): xây workspace cá nhân với các Claude Skills phục vụ tối ưu bài viết SEO, đồng bộ với logic của app [seo-optimizer](https://github.com/anhnhnwork-code/seo-optimizer).
+
+Bài tập về nhà Buổi 4: nâng cấp workspace bằng 2 sub agent (mỗi agent ≥2 skill), rồi giao 1 nhiệm vụ lớn để Claude Code tự phân bổ cho sub agent phù hợp — xem [phần Buổi 4](#buổi-4--sub-agents) bên dưới.
 
 ## Skills
 
@@ -37,6 +39,36 @@ Gọi trực tiếp trong Claude Code:
     SKILL.md
   seo-competitor-gap/
     SKILL.md
-outputs/       # kết quả chạy thử các skill
+  seo-content-brief/
+    SKILL.md
+.claude/agents/
+  seo-onpage-auditor.md
+  seo-strategy-planner.md
+outputs/       # kết quả chạy thử các skill / agent
 conv/          # lịch sử chat xuất bằng /export
 ```
+
+## Buổi 4 — Sub agents
+
+Nâng cấp workspace buổi 3 bằng 2 sub agent, mỗi agent phụ trách 1 giai đoạn của quy trình SEO và dùng ≥2 skill:
+
+| Agent | Nhiệm vụ | Skills dùng |
+|-------|----------|--------------|
+| [`seo-onpage-auditor`](.claude/agents/seo-onpage-auditor.md) | Audit & review chất lượng on-page của bài viết **hiện có** | `seo-audit-checklist` (rule-based) + `seo-ai-review` (AI review) |
+| [`seo-strategy-planner`](.claude/agents/seo-strategy-planner.md) | Phân tích đối thủ & lên kế hoạch nội dung **mới/cải thiện** | `seo-competitor-gap` (gap analysis) + `seo-content-brief` (dàn ý, mới ở buổi 4) |
+
+### Nhiệm vụ lớn đã giao cho Claude Code tự phân bổ
+
+```
+Tối ưu toàn diện bài viết https://osakar.com.vn/tin-tuc/nen-mua-xe-may-dien-hang-nao/
+(từ khóa: xe máy điện) để cạnh tranh với 1 bài so sánh xe máy điện của VinFast:
+1. Đánh giá chất lượng on-page hiện tại của bài (rule-based + AI review).
+2. Phân tích khoảng trống nội dung so với đối thủ VinFast và đề xuất content brief
+   cải thiện, ưu tiên các phần ảnh hưởng ranking rõ nhất.
+Không tự làm cả 2 phần một mình — hãy phân bổ cho các sub agent phù hợp trong
+.claude/agents/ rồi tổng hợp kết quả.
+```
+
+Claude Code (orchestrator) đọc `description` của từng agent và tự gọi `seo-onpage-auditor` cho phần (1), `seo-strategy-planner` cho phần (2), rồi gộp kết quả — không cần chỉ định thủ công tên agent trong prompt.
+
+Kết quả chạy thật: xem `outputs/` (file buổi 4) và lịch sử `/export` trong `conv/`.
